@@ -1,0 +1,5 @@
+;; Include generated API definition files
+(include legacy_widgets_for_gtk_enums.defs)
+(include legacy_widgets_for_gtk_methods.defs)
+(include legacy_widgets_for_gtk_signals.defs)
+(include legacy_widgets_for_gtk_vfuncs.defs)

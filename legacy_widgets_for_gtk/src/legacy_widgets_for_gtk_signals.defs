@@ -1,0 +1,14 @@
+;; From LwgLed
+
+(define-property color
+  (of-object "LwgLed")
+  (prop-type "GParamUInt")
+  (docs "The LED's color")
+  (readable #t)
+  (writable #t)
+  (construct-only #t)
+  (default-value "0")
+)
+
+;; From LwgRGBLed
+

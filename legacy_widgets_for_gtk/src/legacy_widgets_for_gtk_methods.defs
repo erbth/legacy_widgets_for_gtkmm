@@ -1,0 +1,153 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Led
+  (in-module "Lwg")
+  (parent "GtkBin")
+  (c-name "LwgLed")
+  (gtype-id "LWG_TYPE_LED")
+)
+
+(define-object RGBLed
+  (in-module "Lwg")
+  (parent "GtkBin")
+  (c-name "LwgRGBLed")
+  (gtype-id "LWG_TYPE_RGB_LED")
+)
+
+;; Enumerations and flags ...
+
+(define-enum LedColor
+  (in-module "Lwg")
+  (c-name "LwgLedColor")
+  (gtype-id "LWG_TYPE_LED_COLOR")
+  (values
+    '("color-green" "LWG_LED_COLOR_GREEN")
+    '("color-red" "LWG_LED_COLOR_RED")
+    '("color-yellow" "LWG_LED_COLOR_YELLOW")
+    '("color-blue" "LWG_LED_COLOR_BLUE")
+    '("last-color" "LWG_LED_LAST_COLOR")
+  )
+)
+
+
+;; From legacy_widgets_for_gtk.h
+
+
+
+;; From lwgled.h
+
+(define-function lwg_led_get_type
+  (c-name "lwg_led_get_type")
+  (return-type "GType")
+)
+
+(define-function lwg_led_new
+  (c-name "lwg_led_new")
+  (is-constructor-of "LwgLed")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const-gint" "color")
+  )
+)
+
+(define-function lwg_led_new_with_label
+  (c-name "lwg_led_new_with_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const-gint" "color")
+    '("const-gchar*" "label")
+  )
+)
+
+(define-method get_color
+  (of-object "LwgLed")
+  (c-name "lwg_led_get_color")
+  (return-type "guint")
+)
+
+(define-method set_intensity
+  (of-object "LwgLed")
+  (c-name "lwg_led_set_intensity")
+  (return-type "none")
+  (parameters
+    '("const-gfloat" "intensity")
+  )
+)
+
+(define-method get_intensity
+  (of-object "LwgLed")
+  (c-name "lwg_led_get_intensity")
+  (return-type "gfloat")
+)
+
+
+
+;; From lwgrgbled.h
+
+(define-function lwg_rgb_led_get_type
+  (c-name "lwg_rgb_led_get_type")
+  (return-type "GType")
+)
+
+(define-function lwg_rgb_led_new
+  (c-name "lwg_rgb_led_new")
+  (is-constructor-of "LwgRgbLed")
+  (return-type "GtkWidget*")
+  (parameters
+  )
+)
+
+(define-function lwg_rgb_led_new_with_label
+  (c-name "lwg_rgb_led_new_with_label")
+  (return-type "GtkWidget*")
+  (parameters
+    '("const-gchar*" "label")
+  )
+)
+
+(define-method set_red
+  (of-object "LwgRGBLed")
+  (c-name "lwg_rgb_led_set_red")
+  (return-type "none")
+  (parameters
+    '("const-gfloat" "red")
+  )
+)
+
+(define-method set_green
+  (of-object "LwgRGBLed")
+  (c-name "lwg_rgb_led_set_green")
+  (return-type "none")
+  (parameters
+    '("const-gfloat" "green")
+  )
+)
+
+(define-method set_blue
+  (of-object "LwgRGBLed")
+  (c-name "lwg_rgb_led_set_blue")
+  (return-type "none")
+  (parameters
+    '("const-gfloat" "blue")
+  )
+)
+
+(define-method get_red
+  (of-object "LwgRGBLed")
+  (c-name "lwg_rgb_led_get_red")
+  (return-type "gfloat")
+)
+
+(define-method get_green
+  (of-object "LwgRGBLed")
+  (c-name "lwg_rgb_led_get_green")
+  (return-type "gfloat")
+)
+
+(define-method get_blue
+  (of-object "LwgRGBLed")
+  (c-name "lwg_rgb_led_get_blue")
+  (return-type "gfloat")
+)
+
+

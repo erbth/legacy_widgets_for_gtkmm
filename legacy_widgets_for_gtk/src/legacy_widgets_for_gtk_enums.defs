@@ -1,0 +1,25 @@
+;; From lwgled.h
+
+;; Original typedef:
+;; typedef enum
+;; {
+;; 	LWG_LED_COLOR_GREEN,
+;; 	LWG_LED_COLOR_RED,
+;; 	LWG_LED_COLOR_YELLOW,
+;; 	LWG_LED_COLOR_BLUE,
+;; 	LWG_LED_LAST_COLOR
+;; }
+;; LwgLedColor;
+
+(define-enum-extended LedColor
+  (in-module "Lwg")
+  (c-name "LwgLedColor")
+  (values
+    '("color-green" "LWG_LED_COLOR_GREEN" "0")
+    '("color-red" "LWG_LED_COLOR_RED" "1")
+    '("color-yellow" "LWG_LED_COLOR_YELLOW" "2")
+    '("color-blue" "LWG_LED_COLOR_BLUE" "3")
+    '("last-color" "LWG_LED_LAST_COLOR" "4")
+  )
+)
+

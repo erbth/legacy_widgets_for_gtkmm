@@ -1,0 +1,19 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+datarootdir=@datarootdir@
+datadir=@datadir@
+includedir=@includedir@
+
+docdir=${datarootdir}/doc/@LEGACY_WIDGETS_FOR_GTKMM_MODULE_NAME@
+doxytagfile=${docdir}/reference/@LEGACY_WIDGETS_FOR_GTKMM_MODULE_NAME@.tag
+htmlrefdir=${docdir}/reference/html
+htmlrefpub=http://library.gnome.org/devel/@PACKAGE_TARNAME@/unstable/
+
+Name: legacy_widgets_for_gtkmm
+Description: C++ binding for legacy_widgets_for_gtk
+Version: @PACKAGE_VERSION@
+URL: http://www.gtkmm.org/
+Requires: @LEGACY_WIDGETS_FOR_GTKMM_MODULES@
+Libs: -L${libdir} -llegacy_widgets_for_gtkmm-@LEGACY_WIDGETS_FOR_GTKMM_API_VERSION@
+Cflags: -I${includedir}/@LEGACY_WIDGETS_FOR_GTKMM_MODULE_NAME@ -I${libdir}/@LEGACY_WIDGETS_FOR_GTKMM_MODULE_NAME@/include

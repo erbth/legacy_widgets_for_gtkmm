@@ -1,0 +1,31 @@
+; Virtual functions
+; Hand-written file
+
+; LwgSomeType
+
+;(define-vfunc some_vfunc
+;  (of-object "LwgSomeType")
+;  (return-type "void")
+;  (parameters
+;    '("GObject*" "some_object")
+;    '("const-gchar*" "some_string")
+;  )
+;)
+
+(define-vfunc get_color
+  (of-object "LwgLed")
+  (return-type "guint")
+)
+
+(define-vfunc set_intensity
+  (of-object "LwgLed")
+  (return-type "void")
+  (parameters
+    '("const-gfloat" "intensity")
+  )
+)
+
+(define-vfunc get_intensity
+  (of-object "LwgLed")
+  (return-type "gfloat")
+)

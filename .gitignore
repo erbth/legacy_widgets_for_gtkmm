@@ -1,0 +1,6 @@
+*.swp
+mysession.vim
+build/
+untracked/build_scripts/
+untracked/doc/
+untracked/legacy_widgets_for_gtk/

@@ -1,0 +1,10 @@
+doxytagfile=${pc_top_builddir}/doc/reference/@LEGACY_WIDGETS_FOR_GTKMM_MODULE_NAME@.tag
+htmlrefpub=http://library.gnome.org/devel/@PACKAGE_TARNAME@/unstable/
+
+Name: legacy_widgets_for_gtkmm
+Description: C++ binding for legacy_widgets_for_gtk, not installed
+Version: @PACKAGE_VERSION@
+URL: http://www.gtkmm.org/
+Requires: @LEGACY_WIDGETS_FOR_GTKMM_MODULES@
+Libs: ${pc_top_builddir}/${pcfiledir}/legacy_widgets_for_gtkmm/liblegacy_widgets_for_gtkmm-@LEGACY_WIDGETS_FOR_GTKMM_API_VERSION@.la
+Cflags: -I${pc_top_builddir}/${pcfiledir} -I${pc_top_builddir}/${pcfiledir}/@srcdir@

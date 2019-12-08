@@ -1,0 +1,45 @@
+/* Copyright (c) 2019  Thomas Erbesdobler <t.erbesdobler@gmx.de>
+ *
+ * This file is part of legacy_widgets_for_gtkmm.
+ *
+ * legacy_widgets_for_gtkmm is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published
+ * by the Free Software Foundation, either version 2.1 of the License,
+ * or (at your option) any later version.
+ *
+ * legacy_widgets_for_gtkmm is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+_DEFS(legacy_widgets_for_gtkmm,legacy_widgets_for_gtk)
+_CONFIGINCLUDE(legacy_widgets_for_gtkmmconfig.h)
+_PINCLUDE(gtkmm/private/bin_p.h)
+
+#include <gtkmm/bin.h>
+
+namespace Lwg
+{
+
+_WRAP_ENUM(LedColor, LwgLedColor, NO_GTYPE)
+
+class Led : public Gtk::Bin
+{
+  _CLASS_GTKOBJECT(Led, LwgLed, LWG_LED, Gtk::Bin, GtkBin)
+public:
+
+  // _CTOR_DEFAULT
+  _WRAP_CTOR(Led(const gint color=LedColor::LED_COLOR_GREEN), lwg_led_new)
+
+  _WRAP_METHOD(guint get_color() const, lwg_led_get_color)
+  _WRAP_METHOD(void set_intensity(const gfloat intensity), lwg_led_set_intensity)
+  _WRAP_METHOD(gfloat get_intensity() const, lwg_led_get_intensity)
+
+  _WRAP_PROPERTY("color", guint)
+};
+
+} // namespace Lwg

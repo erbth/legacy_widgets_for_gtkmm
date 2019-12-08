@@ -1,0 +1,19 @@
+/* This file is part of legacy_widgets_for_gtkmm. */
+#ifndef LEGACY_WIDGETS_FOR_GTKMMCONFIG_H_INCLUDED
+#define LEGACY_WIDGETS_FOR_GTKMMCONFIG_H_INCLUDED
+
+#include <glibmmconfig.h>
+
+/* Define to omit deprecated API from the library. */
+#mesondefine LEGACY_WIDGETS_FOR_GTKMM_DISABLE_DEPRECATED
+
+/* Major version number of legacy_widgets_for_gtkmm. */
+#mesondefine LEGACY_WIDGETS_FOR_GTKMM_MAJOR_VERSION
+
+/* Minor version number of legacy_widgets_for_gtkmm. */
+#mesondefine LEGACY_WIDGETS_FOR_GTKMM_MINOR_VERSION
+
+/* Micro version number of legacy_widgets_for_gtkmm. */
+#mesondefine LEGACY_WIDGETS_FOR_GTKMM_MICRO_VERSION
+
+#endif /* !LEGACY_WIDGETS_FOR_GTKMMCONFIG_H_INCLUDED */
