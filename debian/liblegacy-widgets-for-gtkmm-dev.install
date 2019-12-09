@@ -1,0 +1,5 @@
+usr/lib/*/*.so
+usr/lib/*/pkgconfig
+usr/lib/*/legacy_widgets_for_gtkmm-1.0
+usr/include
+usr/share
