@@ -93,9 +93,10 @@ if maintainer_mode
   endforeach
 
   extra_include_dirs = ['..']
-  legacy_widgets_for_gtkmm_library = library(legacy_widgets_for_gtkmm_pcname,
+  legacy_widgets_for_gtkmm_library = library(meson.project_name(),
     wrap_init_target, built_file_targets, extra_cc_files,
     version: legacy_widgets_for_gtkmm_libversion,
+	soversion: legacy_widgets_for_gtkmm_api_version,
     include_directories: extra_include_dirs,
     dependencies: legacy_widgets_for_gtkmm_build_dep,
     install: true,
@@ -134,9 +135,10 @@ else # not maintainer_mode
   endforeach
 
   extra_include_dirs = [ '..', '..' / '..' / 'untracked' / 'legacy_widgets_for_gtk' ]
-  legacy_widgets_for_gtkmm_library = library(legacy_widgets_for_gtkmm_pcname,
+  legacy_widgets_for_gtkmm_library = library(meson.project_name(),
     built_cc_files, extra_cc_files,
     version: legacy_widgets_for_gtkmm_libversion,
+	soversion: legacy_widgets_for_gtkmm_api_version,
     include_directories: extra_include_dirs,
     dependencies: legacy_widgets_for_gtkmm_build_dep,
     install: true,
