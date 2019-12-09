@@ -38,7 +38,7 @@ protected:
 
 	Gtk::Box m_HBox5;
 	Gtk::Frame m_frame5;
-	// lwgRGBLED m_led5;
+	Lwg::RGBLed m_led5;
 	Gtk::Label m_label5;
 	Gtk::Scale m_5_r;
 	Gtk::Scale m_5_g;

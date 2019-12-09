@@ -17,6 +17,7 @@
  */
 
 #include <lwgled.h>
+#include <lwgrgbled.h>
 
 namespace Lwg
 {

@@ -42,4 +42,20 @@ public:
   _WRAP_PROPERTY("color", guint)
 };
 
+class RGBLed : public Gtk::Bin
+{
+  _CLASS_GTKOBJECT(RGBLed, LwgRGBLed, LWG_RGB_LED, Gtk::Bin, GtkBin)
+public:
+
+  _WRAP_CTOR(RGBLed(), lwg_rgb_led_new)
+
+  _WRAP_METHOD(void set_red(const gfloat red), lwg_rgb_led_set_red)
+  _WRAP_METHOD(void set_green(const gfloat green), lwg_rgb_led_set_green)
+  _WRAP_METHOD(void set_blue(const gfloat blue), lwg_rgb_led_set_blue)
+
+  _WRAP_METHOD(gfloat get_red() const, lwg_rgb_led_get_red)
+  _WRAP_METHOD(gfloat get_green() const, lwg_rgb_led_get_green)
+  _WRAP_METHOD(gfloat get_blue() const, lwg_rgb_led_get_blue)
+};
+
 } // namespace Lwg

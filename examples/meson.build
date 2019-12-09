@@ -4,7 +4,7 @@
 
 examples = [
 # [[dir-name], exe-name, [sources]]
-  [['example1'], 'example', ['main.cc', 'LWGExampleWindow.cpp']],
+  [['example'], 'example', ['main.cc', 'LWGExampleWindow.cpp']],
 ]
 
 foreach ex : examples

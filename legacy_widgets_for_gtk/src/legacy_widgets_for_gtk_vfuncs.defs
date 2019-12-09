@@ -12,6 +12,7 @@
 ;  )
 ;)
 
+; LwgLed
 (define-vfunc get_color
   (of-object "LwgLed")
   (return-type "guint")
@@ -27,5 +28,45 @@
 
 (define-vfunc get_intensity
   (of-object "LwgLed")
+  (return-type "gfloat")
+)
+
+; LwgRGBLed
+(define-vfunc set_red
+  (of-object "LwgRGBLed")
+  (return-type "void")
+  (parameters
+    '("const-gfloat" "red")
+  )
+)
+
+(define-vfunc set_green
+  (of-object "LwgRGBLed")
+  (return-type "void")
+  (parameters
+    '("const-gfloat" "green")
+  )
+)
+
+(define-vfunc set_blue
+  (of-object "LwgRGBLed")
+  (return-type "void")
+  (parameters
+    '("const-gfloat" "blue")
+  )
+)
+
+(define-vfunc get_red
+  (of-object "LwgRGBLed")
+  (return-type "gfloat")
+)
+
+(define-vfunc get_green
+  (of-object "LwgRGBLed")
+  (return-type "gfloat")
+)
+
+(define-vfunc get_blue
+  (of-object "LwgRGBLed")
   (return-type "gfloat")
 )

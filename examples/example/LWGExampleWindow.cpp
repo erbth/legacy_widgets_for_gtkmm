@@ -65,7 +65,7 @@ LWGExampleWindow::LWGExampleWindow () :
 
 	m_VBox.pack_start (m_HBox5);
 	m_HBox5.pack_start (m_frame5, Gtk::PACK_SHRINK);
-	//m_frame5.add (m_led5);
+	m_frame5.add (m_led5);
 	m_HBox5.pack_start (m_label5, Gtk::PACK_SHRINK);
 	m_HBox5.pack_start (m_5_r, Gtk::PACK_SHRINK, 10);
 	m_HBox5.pack_start (m_5_g, Gtk::PACK_SHRINK, 10);
@@ -126,15 +126,15 @@ void LWGExampleWindow::on_onoff4_toggled ()
 
 void LWGExampleWindow::on_5_r_changed ()
 {
-	//m_led5.set_red (m_5_r.get_value());
+	m_led5.set_red (m_5_r.get_value());
 }
 
 void LWGExampleWindow::on_5_g_changed ()
 {
-	//m_led5.set_green (m_5_g.get_value());
+	m_led5.set_green (m_5_g.get_value());
 }
 
 void LWGExampleWindow::on_5_b_changed ()
 {
-	//m_led5.set_blue (m_5_b.get_value());
+	m_led5.set_blue (m_5_b.get_value());
 }
