@@ -15,5 +15,5 @@ Description: C++ binding for legacy_widgets_for_gtk
 Version: @PACKAGE_VERSION@
 URL: http://www.gtkmm.org/
 Requires: @LEGACY_WIDGETS_FOR_GTKMM_MODULES@
-Libs: -L${libdir} -llegacy_widgets_for_gtkmm-@LEGACY_WIDGETS_FOR_GTKMM_API_VERSION@
+Libs: -L${libdir} -llegacy_widgets_for_gtkmm
 Cflags: -I${includedir}/@LEGACY_WIDGETS_FOR_GTKMM_MODULE_NAME@ -I${libdir}/@LEGACY_WIDGETS_FOR_GTKMM_MODULE_NAME@/include
